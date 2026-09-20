@@ -2,7 +2,7 @@
 name: startup-seo-starter
 description: Build and improve SEO-ready startup websites and early organic growth foundations, including technical SEO, initial content, AI-search visibility, measurement, and recurring SEO/GEO change monitoring. Do not use for unrelated product UI work or mature enterprise SEO operations.
 metadata:
-  version: "0.4.0"
+  version: "1.0.0"
   focus: startup websites and early organic growth
 ---
 

@@ -2,6 +2,8 @@
 
 一个面向初创企业和小团队的 Codex skill，用于从 0 到 1 建立 SEO-ready 网站、AI 搜索可见性、早期自然增长基础，以及可持续的 SEO/GEO 动态跟踪机制。
 
+由 [Pingplus](https://pingplus.ai) 维护。
+
 它把产品定位、网站信息架构、Landing Page、技术 SEO、初始内容、GEO 和早期测量放进同一条工作流，但不会把成熟企业 SEO 运营、付费投放或一般产品后台设计混进来。
 
 ## 适用对象
@@ -55,10 +57,15 @@
 Use $startup-seo-starter to plan the first SEO-ready website for this startup.
 Use $startup-seo-starter to audit this homepage for positioning, conversion, SEO, and AI-search readiness.
 Use $startup-seo-starter to create a 90-day organic-growth plan with a weekly measurement cadence.
+Use $startup-seo-starter to review configured SEO/GEO sources since the last run and produce a two-day change digest.
 ```
 
 ## 当前状态
 
-这是一个通用的 `0.4.0` 基础版本。它提供高质量的工作流、决策标准和参考文档，并包含一个可选的 GSC/GA4 MCP CLI 包装器；其他抓取、AI citation benchmark、动态监控和报告执行能力应根据团队环境以可选连接器、浏览器能力或脚本接入。
+这是一个通用的 `1.0.0` 首个公开稳定版本。它提供高质量的工作流、决策标准和参考文档，并包含一个可选的 GSC/GA4 MCP CLI 包装器；其他抓取、AI citation benchmark、动态监控和报告执行能力应根据团队环境以可选连接器、浏览器能力或脚本接入。
 
 Google MCP 的安装和授权说明见 `references/mcp-setup.md`。skill 不会未经用户同意自动下载 MCP、修改客户端配置或处理 Google 凭据。
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
