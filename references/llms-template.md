@@ -2,6 +2,8 @@
 
 Use `https://example.com/llms.txt` as the canonical location. Treat the file as a concise discovery aid, not a substitute for crawlable pages, robots policy, sitemaps, or structured data.
 
+`llms.txt` is an emerging convention, not a Google Search requirement. Its presence does not guarantee indexing, rankings, retrieval, or AI citations. Keep it accurate only when it provides useful navigation for people and machines.
+
 ```markdown
 # Example Brand
 

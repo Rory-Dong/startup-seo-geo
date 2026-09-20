@@ -1,0 +1,44 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate skill frontmatter
+        run: |
+          ruby -ryaml -e '
+            text = File.read("SKILL.md")
+            match = /\\A---\\n(.*?)\\n---/m.match(text)
+            abort "missing YAML frontmatter" unless match
+            data = YAML.safe_load(match[1])
+            abort "invalid frontmatter" unless data.is_a?(Hash)
+            abort "invalid skill name" unless data["name"] == "startup-seo-starter"
+            abort "missing description" unless data["description"].is_a?(String) && !data["description"].empty?
+          '
+
+      - name: Validate Markdown references
+        run: node scripts/validate-skill.mjs
+
+      - name: Check JavaScript syntax
+        run: node --check scripts/google-mcp-connector.mjs
+
+      - name: Check connector dry-runs
+        run: |
+          node scripts/google-mcp-connector.mjs --source gsc --action sites --dry-run
+          node scripts/google-mcp-connector.mjs --source ga4 --action properties --dry-run
+          node scripts/google-mcp-connector.mjs --source ga4 --action query --property-id 123456789 --dry-run

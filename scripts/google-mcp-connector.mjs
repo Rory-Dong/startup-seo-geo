@@ -20,14 +20,22 @@ GA4:
   node scripts/google-mcp-connector.mjs --source ga4 --action properties
   node scripts/google-mcp-connector.mjs --source ga4 --action query --property-id 123456789 --start-date 2026-09-01 --end-date 2026-09-07 --dimensions landingPagePlusQueryString --metrics sessions,engagementRate,conversions
   node scripts/google-mcp-connector.mjs --source ga4 --action organic-landing-pages --property-id 123456789 --start-date 2026-09-01 --end-date 2026-09-07
+  node scripts/google-mcp-connector.mjs --source ga4 --action page-performance --property-id 123456789 --page-path /pricing
+  node scripts/google-mcp-connector.mjs --source ga4 --action traffic-sources --property-id 123456789 --channel-group Organic Search
+  node scripts/google-mcp-connector.mjs --source ga4 --action realtime --property-id 123456789
   node scripts/google-mcp-connector.mjs --source ga4 --action conversion-funnel --property-id 123456789 --start-date 2026-09-01 --end-date 2026-09-07
 
 Options:
   --runtime PATH       Override SEARCH_CONSOLE_MCP_RUNTIME
   --output PATH        Write JSON to a file instead of stdout
-  --dry-run             Validate arguments and print the planned operation
+  --dry-run             Validate action arguments without loading the MCP runtime
   --help                Show this help
 `;
+
+const ACTIONS = {
+  gsc: new Set(['sites', 'query', 'sitemaps', 'inspect']),
+  ga4: new Set(['properties', 'query', 'organic-landing-pages', 'page-performance', 'traffic-sources', 'realtime', 'conversion-funnel']),
+};
 
 function parseArgs(argv) {
   const args = {};
@@ -63,6 +71,29 @@ function required(args, name) {
     throw new Error(`Missing required option: --${name}`);
   }
   return String(value);
+}
+
+function validateActionArguments(args, source, action) {
+  if (!ACTIONS[source].has(action)) {
+    throw new Error(`Unsupported ${source.toUpperCase()} action: ${action}. Supported actions: ${[...ACTIONS[source]].join(', ')}`);
+  }
+
+  if (source === 'gsc') {
+    if (action !== 'sites') required(args, 'site');
+    if (action === 'inspect') {
+      const urls = csv(args.urls || args.url);
+      if (!urls.length) throw new Error('GSC inspect requires --urls URL1,URL2 or --url URL.');
+    }
+    if (action === 'query') {
+      integer(args.limit, 1000);
+      parseJsonOption(args.filters, 'filters');
+    }
+    return;
+  }
+
+  if (action !== 'properties') required(args, 'property-id');
+  if (action !== 'properties') integer(args.limit, 50);
+  if (action === 'query') nonNegativeInteger(args.offset, 0);
 }
 
 function csv(value, fallback = []) {
@@ -167,7 +198,6 @@ async function runGsc(args, root) {
   if (action === 'inspect') {
     const { inspectBatch } = await importRuntimeModule(root, 'google/tools/inspection.js');
     const urls = csv(args.urls || args.url);
-    if (!urls.length) throw new Error('GSC inspect requires --urls URL1,URL2 or --url URL.');
     return envelope('gsc', action, { site, urls }, await inspectBatch(site, urls, args.language || 'en-US'));
   }
   if (action !== 'query') throw new Error(`Unsupported GSC action: ${action}`);
@@ -256,8 +286,11 @@ async function main() {
   }
   const source = required(args, 'source').toLowerCase();
   if (!['gsc', 'ga4'].includes(source)) throw new Error('--source must be gsc or ga4.');
+  const action = String(args.action || 'query').toLowerCase();
+  args.action = action;
+  validateActionArguments(args, source, action);
   const configuredRuntime = args.runtime || process.env.SEARCH_CONSOLE_MCP_RUNTIME || null;
-  const plan = { source, action: args.action || 'query', runtime: configuredRuntime ? path.resolve(configuredRuntime) : null };
+  const plan = { source, action, runtime: configuredRuntime ? path.resolve(configuredRuntime) : null };
   if (args['dry-run']) {
     console.log(JSON.stringify({ dryRun: true, plan }, null, 2));
     return;

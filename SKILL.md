@@ -2,7 +2,7 @@
 name: startup-seo-starter
 description: Build and improve SEO-ready startup websites and early organic growth foundations, including technical SEO, initial content, AI-search visibility, measurement, and recurring SEO/GEO change monitoring. Do not use for unrelated product UI work or mature enterprise SEO operations.
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
   focus: startup websites and early organic growth
 ---
 
@@ -29,12 +29,15 @@ Use this skill to help an early-stage company establish a clear, useful, search-
 | Local business, ecommerce, product/category pages | Optional business-model track | `references/local-and-commerce.md` |
 | GSC, GA4, performance data, crawler exports, baseline, weekly report | Measurement and iteration | `references/evidence-and-reporting.md`, `references/google-connectors.md`, and `references/weekly-reporting.md` |
 | Search algorithm/product changes, SEO/GEO blogs, recurring digest, industry updates | SEO/GEO change monitoring | `references/seo-geo-monitoring.md` |
+| Minimum startup context, assumptions, missing inputs, or deliverable selection | Intake and evidence contract | `references/intake-template.md` |
+| Startup SEO audit, 90-day plan, content brief, or GEO report format | Standard output templates | `references/output-templates.md` |
+| Source verification, time-sensitive claims, or `llms.txt` status | Sources of truth and freshness | `references/sources-of-truth.md` |
 
 Combine modes only when needed. For a new SaaS website, use Startup growth foundation + Startup website experience + SEO foundation audit. Do not trigger a full GEO or reporting workflow for a one-page metadata fix. Use the monitoring mode only when the user asks to track ecosystem changes or a recurring digest is explicitly configured.
 
 ## Operating workflow
 
-1. Establish the startup context: product, target customer, painful job, business model, market, geography, current website, constraints, and desired first conversion.
+1. Establish the startup context using `references/intake-template.md` when the request is broad or information is missing. Label unknowns and assumptions instead of inventing them.
 2. State one concise design read before substantial website work: `Design read: [audience] needs [primary job]; use [information hierarchy and interaction strategy] with [visual character], while avoiding [generic pattern].`
 3. Define the smallest useful site: homepage, product or service page, use cases, pricing or conversion page, proof, documentation/resources, and trust/about pages only when justified by the business.
 4. Inspect available evidence before making claims. Prefer rendered HTML for client-side metadata and schema; use Search Console, analytics, performance data, crawl exports, or approved connectors when available; label assumptions and missing data.
@@ -93,3 +96,6 @@ Use this skill for early-stage websites and initial organic-growth systems. Rout
 - Read [references/startup-web-foundation.md](references/startup-web-foundation.md) for product-to-website framing, page maps, landing-page structure, and design quality gates.
 - Read [references/weekly-reporting.md](references/weekly-reporting.md) when the user explicitly wants a recurring SEO/GEO report or weekly operating cadence.
 - Read [references/seo-geo-monitoring.md](references/seo-geo-monitoring.md) when tracking SEO/GEO blogs, official platform changes, search incidents, or a recurring two-day/weekly industry digest.
+- Read [references/intake-template.md](references/intake-template.md) before a broad startup SEO/GEO engagement or when the user's inputs are incomplete.
+- Read [references/output-templates.md](references/output-templates.md) when the user asks for a standard audit, 90-day roadmap, content brief, or GEO report.
+- Read [references/sources-of-truth.md](references/sources-of-truth.md) when making time-sensitive SEO/GEO claims, citing platform behavior, or evaluating `llms.txt`.

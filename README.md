@@ -60,10 +60,28 @@ Use $startup-seo-starter to review configured SEO/GEO sources since the last run
 
 ## Status
 
-This is the first public stable release, `1.0.1`. It provides startup-focused workflows, decision criteria, and reference documentation, plus an optional GSC/GA4 MCP CLI wrapper. Other crawling, AI citation benchmarking, dynamic monitoring, and report execution capabilities should be connected through the tools available in each team's environment.
+This is the `1.1.0` release. It provides startup-focused workflows, decision criteria, reusable intake and output templates, and reference documentation, plus an optional GSC/GA4 MCP CLI wrapper. Other crawling, AI citation benchmarking, dynamic monitoring, and report execution capabilities should be connected through the tools available in each team's environment.
 
 Google MCP installation and authorization guidance is available in `references/mcp-setup.md`. The skill does not silently download MCP software, modify client configuration, or handle Google credentials without user approval.
 
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## Installation and Validation
+
+The repository is named `startup-seo-geo` for GitHub discovery. The installed Codex skill and invocation name remain `$startup-seo-starter` because the workflow is specifically focused on startup SEO foundations.
+
+Copy or clone this repository into your Codex skills directory, then validate the public skill:
+
+```bash
+git clone https://github.com/Rory-Dong/startup-seo-geo.git ~/.codex/skills/startup-seo-starter
+cd ~/.codex/skills/startup-seo-starter
+node scripts/validate-skill.mjs
+node scripts/google-mcp-connector.mjs --source gsc --action sites --dry-run
+node scripts/google-mcp-connector.mjs --source ga4 --action properties --dry-run
+```
+
+The skill uses `SKILL.md` and `agents/openai.yaml` and is intended for Codex clients that support local skill directories. The optional connector requires Node.js 20 or later and an installed `search-console-mcp` runtime; see `references/google-connectors.md` for compatibility notes. No Google authorization is needed for the dry-run checks.
+
+If Google access is unavailable, provide a GSC CSV/JSON export or a GA4 CSV/JSON export with the property, date range, dimensions, metrics, and data cutoff. The resulting report must label the export source and limitations rather than present it as live data.

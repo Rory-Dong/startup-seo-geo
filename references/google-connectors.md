@@ -14,6 +14,20 @@ export SEARCH_CONSOLE_MCP_RUNTIME="/path/to/search-console-mcp"
 
 The directory must contain the runtime's `dist/` folder. Authentication remains owned by the MCP runtime. Use its normal account setup or service-account configuration; never commit tokens, private keys, or account files to this repository.
 
+## Compatibility
+
+The wrapper is tested against the `search-console-mcp` runtime contract used by this repository: a package directory with a `dist/` folder containing the Google tool modules imported by `scripts/google-mcp-connector.mjs`. Because those paths are internal runtime files rather than a stable public API, upgrades can require a wrapper update.
+
+Before using a new runtime version, run:
+
+```bash
+node scripts/google-mcp-connector.mjs --source gsc --action sites --dry-run
+node scripts/google-mcp-connector.mjs --source ga4 --action properties --dry-run
+node --check scripts/google-mcp-connector.mjs
+```
+
+Then run a read-only `sites` or `properties` request with the runtime authorized. Record the exact runtime version in the team's environment or report metadata; do not hard-code a private local path in this repository.
+
 ## GSC operations
 
 ```bash
@@ -65,6 +79,23 @@ node scripts/google-mcp-connector.mjs \
   --property-id 123456789 \
   --start-date 2026-09-01 \
   --end-date 2026-09-07
+
+node scripts/google-mcp-connector.mjs \
+  --source ga4 \
+  --action page-performance \
+  --property-id 123456789 \
+  --page-path /pricing
+
+node scripts/google-mcp-connector.mjs \
+  --source ga4 \
+  --action traffic-sources \
+  --property-id 123456789 \
+  --channel-group 'Organic Search'
+
+node scripts/google-mcp-connector.mjs \
+  --source ga4 \
+  --action realtime \
+  --property-id 123456789
 
 node scripts/google-mcp-connector.mjs \
   --source ga4 \
