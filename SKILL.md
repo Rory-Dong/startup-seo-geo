@@ -2,7 +2,7 @@
 name: startup-seo-starter
 description: Build and improve SEO-ready startup websites and early organic growth foundations. Use for product positioning, website information architecture, landing pages, technical SEO, initial content planning, AI-search visibility, Schema, sitemap, GEO readiness, and early SEO measurement. Do not use for unrelated product UI work or mature enterprise SEO operations.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   focus: startup websites and early organic growth
 ---
 
@@ -26,7 +26,7 @@ Use this skill to help an early-stage company establish a clear, useful, search-
 | robots.txt, AI bots, llms.txt, server rendering, entity readiness | Technical GEO | `references/llms-template.md` |
 | PR, directories, partnerships, reviews, founder expertise, early authority | Authority and distribution | `references/authority-and-distribution.md` |
 | Local business, ecommerce, product/category pages | Optional business-model track | `references/local-and-commerce.md` |
-| GSC, GA4, performance data, crawler exports, baseline, weekly report | Measurement and iteration | `references/evidence-and-reporting.md` and `references/weekly-reporting.md` |
+| GSC, GA4, performance data, crawler exports, baseline, weekly report | Measurement and iteration | `references/evidence-and-reporting.md`, `references/google-connectors.md`, and `references/weekly-reporting.md` |
 
 Combine modes only when needed. For a new SaaS website, use Startup growth foundation + Startup website experience + SEO foundation audit. Do not trigger a full GEO or reporting workflow for a one-page metadata fix.
 
@@ -83,6 +83,7 @@ Use this skill for early-stage websites and initial organic-growth systems. Rout
 - Read [references/startup-discovery.md](references/startup-discovery.md) before building the first keyword list, page inventory, or content roadmap.
 - Read [references/launch-checklist.md](references/launch-checklist.md) before launch, migration, or the first public deployment.
 - Read [references/analytics-and-conversion.md](references/analytics-and-conversion.md) when connecting organic traffic to CTA, signup, demo, activation, or revenue events.
+- Read [references/google-connectors.md](references/google-connectors.md) when the local `search-console-mcp` runtime is available and the user wants live GSC or GA4 data.
 - Read [references/authority-and-distribution.md](references/authority-and-distribution.md) when planning early mentions, links, partnerships, reviews, or founder-led distribution.
 - Read [references/local-and-commerce.md](references/local-and-commerce.md) for local, maps, ecommerce, and product visibility work.
 - Read [references/evidence-and-reporting.md](references/evidence-and-reporting.md) for data-source contracts, citation benchmarks, crawler telemetry, and recurring reports.
