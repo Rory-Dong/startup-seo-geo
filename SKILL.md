@@ -22,6 +22,7 @@ Use this skill to help an early-stage company establish a clear, useful, search-
 | JSON-LD, Schema, sitemap, hreflang, canonical, social metadata | Technical SEO assets | `references/schema-patterns.md` |
 | First keywords, search intent, topic clusters, content brief, internal links | Initial content system | `references/content-and-programmatic.md` |
 | GA4/GSC setup, CTA events, signup funnel, organic conversion measurement | Analytics and conversion | `references/analytics-and-conversion.md` |
+| Live Google data unavailable, MCP installation, OAuth, GA4 property access, connector setup | Google MCP setup | `references/mcp-setup.md` and `references/google-connectors.md` |
 | AI Overviews, ChatGPT, Perplexity, citations, AI visibility | GEO foundation | `references/citability-checklist.md` |
 | robots.txt, AI bots, llms.txt, server rendering, entity readiness | Technical GEO | `references/llms-template.md` |
 | PR, directories, partnerships, reviews, founder expertise, early authority | Authority and distribution | `references/authority-and-distribution.md` |
@@ -84,6 +85,7 @@ Use this skill for early-stage websites and initial organic-growth systems. Rout
 - Read [references/launch-checklist.md](references/launch-checklist.md) before launch, migration, or the first public deployment.
 - Read [references/analytics-and-conversion.md](references/analytics-and-conversion.md) when connecting organic traffic to CTA, signup, demo, activation, or revenue events.
 - Read [references/google-connectors.md](references/google-connectors.md) when the local `search-console-mcp` runtime is available and the user wants live GSC or GA4 data.
+- Read [references/mcp-setup.md](references/mcp-setup.md) when the runtime is missing, authorization is incomplete, or the user asks how to install and connect the Google MCP project.
 - Read [references/authority-and-distribution.md](references/authority-and-distribution.md) when planning early mentions, links, partnerships, reviews, or founder-led distribution.
 - Read [references/local-and-commerce.md](references/local-and-commerce.md) for local, maps, ecommerce, and product visibility work.
 - Read [references/evidence-and-reporting.md](references/evidence-and-reporting.md) for data-source contracts, citation benchmarks, crawler telemetry, and recurring reports.

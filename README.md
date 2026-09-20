@@ -27,6 +27,7 @@
 - 本地 SEO 或电商 SEO 的可选分支
 - GSC、分析、性能和爬虫数据的早期基线
 - 可选的 GSC/GA4 MCP 连接器，输出统一 JSON 数据
+- Google MCP 安装、OAuth、GA4 property 和 CSV/JSON fallback 指引
 - 可选的 SEO/GEO 周报和迭代节奏
 
 ## 周报能力
@@ -56,3 +57,5 @@ Use $startup-seo-starter to create a 90-day organic-growth plan with a weekly me
 ## 当前状态
 
 这是一个通用的 `0.3.0` 基础版本。它提供高质量的工作流、决策标准和参考文档，并包含一个可选的 GSC/GA4 MCP CLI 包装器；其他抓取、AI citation benchmark 和报告执行能力应根据团队环境以可选连接器或脚本接入。
+
+Google MCP 的安装和授权说明见 `references/mcp-setup.md`。skill 不会未经用户同意自动下载 MCP、修改客户端配置或处理 Google 凭据。

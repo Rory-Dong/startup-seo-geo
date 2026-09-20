@@ -2,6 +2,8 @@
 
 The public skill includes an optional CLI wrapper at `scripts/google-mcp-connector.mjs`. It reuses the installed `search-console-mcp` runtime when that MCP package is available. The skill does not include credentials, account files, property IDs, or any product-specific configuration.
 
+If the runtime is not installed or authorized, read [mcp-setup.md](mcp-setup.md) for the public project, OAuth, GA4 property access, and fallback setup.
+
 ## Setup
 
 Set the environment variable to the local package directory, or pass `--runtime`:
