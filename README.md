@@ -1,57 +1,55 @@
 # Startup SEO Starter for Codex
 
-一个面向初创企业和小团队的 Codex skill，用于从 0 到 1 建立 SEO-ready 网站、AI 搜索可见性、早期自然增长基础，以及可持续的 SEO/GEO 动态跟踪机制。
+A Codex skill maintained by [Pingplus](https://pingplus.ai) for early-stage companies and small teams building an SEO-ready website, AI-search visibility, an early organic-growth foundation, and a sustainable SEO/GEO monitoring workflow.
 
-由 [Pingplus](https://pingplus.ai) 维护。
+It connects product positioning, website information architecture, landing pages, technical SEO, initial content, GEO, and early measurement in one workflow. It does not turn mature enterprise SEO operations, paid acquisition, or general product dashboard design into part of the skill.
 
-它把产品定位、网站信息架构、Landing Page、技术 SEO、初始内容、GEO 和早期测量放进同一条工作流，但不会把成熟企业 SEO 运营、付费投放或一般产品后台设计混进来。
+## Who It Is For
 
-## 适用对象
+- Newly launched SaaS, AI products, and developer tools
+- Independent developers and small startup teams
+- B2B companies building their first marketing website
+- New brands validating organic-growth opportunities
+- Teams that want to improve conversion, Google Search visibility, and AI-search understanding together
 
-- 刚上线的 SaaS、AI 产品和开发者工具
-- 独立开发者和小型创业团队
-- 正在制作第一版官网或营销站的 B2B 公司
-- 需要验证自然流量机会的新品牌
-- 想同时兼顾用户转化、Google 搜索和 AI 搜索理解的网站
+## Capabilities
 
-## 能力范围
+- Map product positioning to website pages
+- Discover ICP language, customer vocabulary, initial keywords, and page opportunities
+- Structure homepages and landing pages
+- Plan website information architecture, URLs, and internal links
+- Establish technical SEO fundamentals: indexing, Schema, sitemaps, canonicals, and hreflang
+- Run pre-launch and post-launch SEO checks and create 30/60/90-day launch plans
+- Build an initial keyword, search-intent, topic-cluster, and content roadmap
+- Establish GEO foundations: citability, entity clarity, authority, and `llms.txt`
+- Connect GSC/GA4 measurement to CTA, signup, demo, activation, and revenue events
+- Build early authority through founder distribution, customer proof, directories, partnerships, and reviews
+- Support optional local SEO and ecommerce tracks
+- Create early baselines from GSC, analytics, performance, and crawler data
+- Use an optional GSC/GA4 MCP connector that produces normalized JSON data
+- Follow Google MCP installation, OAuth, GA4 property, and CSV/JSON fallback guidance
+- Run optional weekly SEO/GEO reporting and iteration cadences
+- Monitor SEO/GEO changes with source tiers, incremental deduplication, date verification, impact assessment, and action summaries
 
-- 产品定位到网站页面的映射
-- ICP、客户语言、首批关键词和页面机会发现
-- Homepage 和 Landing Page 结构
-- 网站信息架构、URL 和内部链接
-- 技术 SEO 基础：索引、Schema、sitemap、canonical、hreflang
-- 上线前后 SEO 检查和 30/60/90 天启动计划
-- 首批关键词、搜索意图、主题集群和内容路线图
-- GEO 基础：可引用性、实体清晰度、权威和 llms.txt
-- GSC/GA4、CTA、注册、Demo、激活和收入事件的测量框架
-- 创始人分发、客户案例、目录、合作伙伴、评论和早期权威建设
-- 本地 SEO 或电商 SEO 的可选分支
-- GSC、分析、性能和爬虫数据的早期基线
-- 可选的 GSC/GA4 MCP 连接器，输出统一 JSON 数据
-- Google MCP 安装、OAuth、GA4 property 和 CSV/JSON fallback 指引
-- 可选的 SEO/GEO 周报和迭代节奏
-- 可选的 SEO/GEO 动态监控：来源分层、增量去重、日期核验、影响判断和行动摘要
+## Recurring Reporting and Monitoring
 
-## 周报能力
+Generic weekly reporting guidance is available in `references/weekly-reporting.md`. It helps Codex produce a weekly SEO/GEO operating report without including any company-specific product names, internal data sources, fixed storage locations, or project-specific scripts.
 
-包含通用的周报方法和数据口径，位于 `references/weekly-reporting.md`。它可以指导 Codex 生成周度 SEO/GEO operating report，但不包含任何特定公司的产品名、内部数据源、固定云盘地址或项目专用脚本。
+The monitoring method is documented in `references/seo-geo-monitoring.md`. It supports two-day, weekly, or on-demand SEO/GEO change digests that distinguish official facts, industry analysis, and startup-specific recommendations. Scheduling, history, external access, and notifications remain the responsibility of a local automation, CI job, or other scheduler.
 
-动态跟踪方法位于 `references/seo-geo-monitoring.md`。它可以指导 Codex 生成双日、周度或按需的 SEO/GEO change digest，区分官方事实、行业观点和针对初创企业的行动建议。定时执行、历史去重、外部访问和通知由本地 automation 或其他调度器负责，不会被硬编码进 skill。
+## Scope Exclusions
 
-## 不包含的内容
+- Company- or product-specific internal rules
+- Fixed BigQuery tables, API keys, or cloud-storage configuration
+- A team-specific reporting template
+- Guarantees of rankings, indexing, AI citations, or conversions
+- A default dependency on external APIs; data connectors are optional adapters
 
-- 特定公司或产品的内部规则
-- 固定的 BigQuery 表、API 密钥或云盘配置
-- 某个团队专属的周报模板
-- 自动保证排名、收录、AI 引用或转化结果
-- 默认依赖外部 API；数据连接器应作为可选适配器接入
+## Usage
 
-## 使用方式
+Copy this directory into your Codex skills directory or invoke it explicitly with `$startup-seo-starter`.
 
-复制本目录到 Codex skills 目录，或显式使用 `$startup-seo-starter`。
-
-推荐从这些请求开始：
+Example requests:
 
 ```text
 Use $startup-seo-starter to plan the first SEO-ready website for this startup.
@@ -60,11 +58,11 @@ Use $startup-seo-starter to create a 90-day organic-growth plan with a weekly me
 Use $startup-seo-starter to review configured SEO/GEO sources since the last run and produce a two-day change digest.
 ```
 
-## 当前状态
+## Status
 
-这是一个通用的 `1.0.0` 首个公开稳定版本。它提供高质量的工作流、决策标准和参考文档，并包含一个可选的 GSC/GA4 MCP CLI 包装器；其他抓取、AI citation benchmark、动态监控和报告执行能力应根据团队环境以可选连接器、浏览器能力或脚本接入。
+This is the first public stable release, `1.0.1`. It provides startup-focused workflows, decision criteria, and reference documentation, plus an optional GSC/GA4 MCP CLI wrapper. Other crawling, AI citation benchmarking, dynamic monitoring, and report execution capabilities should be connected through the tools available in each team's environment.
 
-Google MCP 的安装和授权说明见 `references/mcp-setup.md`。skill 不会未经用户同意自动下载 MCP、修改客户端配置或处理 Google 凭据。
+Google MCP installation and authorization guidance is available in `references/mcp-setup.md`. The skill does not silently download MCP software, modify client configuration, or handle Google credentials without user approval.
 
 ## License
 
