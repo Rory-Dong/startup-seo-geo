@@ -1,0 +1,16 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1280" height="640" fill="#F7EDEE"/>
+  <rect x="40" y="40" width="1200" height="560" rx="20" fill="#FFFFFF" stroke="#B42333" stroke-width="2"/>
+
+  <image x="90" y="88" width="64" height="64" preserveAspectRatio="xMidYMid meet" xlink:href="pingplus-mark-dark.svg"/>
+  <text x="174" y="129" fill="#171B21" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="0.2">Pingplus</text>
+  <text x="1190" y="126" text-anchor="end" fill="#B42333" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">CODEX SKILL</text>
+
+  <text x="104" y="305" fill="#171B21" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-1.5">Startup SEO Starter</text>
+  <text x="108" y="370" fill="#4F5863" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="500">SEO / GEO foundations for early-stage teams</text>
+
+  <rect x="108" y="432" width="230" height="48" rx="24" fill="#B42333"/>
+  <text x="223" y="463" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1.4">GSC / GA4 MCP</text>
+  <text x="108" y="536" fill="#68727D" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="500">Organic growth  ·  Search visibility  ·  AI discovery</text>
+  <text x="1190" y="536" text-anchor="end" fill="#B42333" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="700">pingplus.ai</text>
+</svg>
