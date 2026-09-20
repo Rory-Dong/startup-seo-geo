@@ -23,7 +23,7 @@ jobs:
         run: |
           ruby -ryaml -e '
             text = File.read("SKILL.md")
-            match = /\\A---\\n(.*?)\\n---/m.match(text)
+            match = /\A---\n(.*?)\n---/m.match(text)
             abort "missing YAML frontmatter" unless match
             data = YAML.safe_load(match[1])
             abort "invalid frontmatter" unless data.is_a?(Hash)
