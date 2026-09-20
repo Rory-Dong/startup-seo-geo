@@ -1,49 +1,49 @@
 ---
-name: seo-geo-suite
-description: Audit, plan, implement, and measure traditional SEO and AI-search visibility (GEO) across websites and content. Use for SEO audits, technical SEO, schema/sitemaps/hreflang, content authority, programmatic/local/ecommerce SEO, GSC and crawl evidence, AI citations, crawler access, llms.txt, competitive visibility, and SEO/GEO reporting.
+name: startup-seo-starter
+description: Build and improve SEO-ready startup websites and early organic growth foundations. Use for product positioning, website information architecture, landing pages, technical SEO, initial content planning, AI-search visibility, Schema, sitemap, GEO readiness, and early SEO measurement. Do not use for unrelated product UI work or mature enterprise SEO operations.
 metadata:
-  version: "1.0.0"
-  consolidates:
-    - seo-audit-suite
-    - ai-search-geo
-    - geo-technical-reporting
-    - seo-content-authority
-    - seo-technical-assets
-    - seo-intelligence-tooling
-    - local-commerce-seo
-    - programmatic-seo
-    - competitor-intelligence
+  version: "0.2.0"
+  focus: startup websites and early organic growth
 ---
 
-# SEO + GEO Suite
+# Startup SEO Starter
 
-Use this skill as the routing layer for organic search and AI-search visibility work. Treat traditional SEO and GEO as related but distinct: search rankings, crawlability, and indexation remain foundations, while GEO adds citability, entity clarity, authority, platform presence, and AI crawler access.
+Use this skill to help an early-stage company establish a clear, useful, search-ready web presence. Treat SEO and GEO as part of a product-growth foundation: first clarify who the product serves and what problem it solves, then design a site that communicates that value, can be discovered, and gives visitors a credible next action.
 
 ## Choose the smallest useful mode
 
 | Request | Mode | Read when needed |
 |---|---|---|
-| Full site, page, ranking drop, indexing, Core Web Vitals, SEO roadmap | Traditional SEO audit | `references/audit-checklist.md` |
-| AI Overviews, ChatGPT, Perplexity, citations, recommendations, AI visibility | Content GEO | `references/citability-checklist.md` |
-| robots.txt, AI bots, llms.txt, server rendering, entity/schema readiness | Technical GEO | `references/llms-template.md` |
-| JSON-LD, schema, sitemap, hreflang, canonicals, image/social metadata | Technical SEO assets | `references/schema-patterns.md` |
-| E-E-A-T, SERP intent, topic clusters, content brief, internal links | Content authority | `references/content-and-programmatic.md` |
-| Data-driven pages, templates, URL systems, indexation at scale | Programmatic SEO | `references/content-and-programmatic.md` |
-| GBP, maps, local citations, reviews, product/category/shopping pages | Local or ecommerce SEO | `references/local-and-commerce.md` |
-| GSC, GA4, PageSpeed, CrUX, DataForSEO, Firecrawl, backlinks, drift | SEO intelligence | `references/evidence-and-reporting.md` |
-| Competitor profiles, alternatives, comparison pages, battlecards | Competitive SEO/GEO | `references/local-and-commerce.md` |
-| Query corpus testing, citation benchmark, crawler telemetry, weekly report | Measurement/reporting | `references/evidence-and-reporting.md` |
+| New product, unclear audience, value proposition, first website | Startup growth foundation | `references/startup-web-foundation.md` |
+| Homepage, landing page, page hierarchy, navigation, CTA, responsive experience | Startup website experience | `references/startup-web-foundation.md` |
+| Indexing, crawlability, Core Web Vitals, page or site health | SEO foundation audit | `references/audit-checklist.md` |
+| JSON-LD, Schema, sitemap, hreflang, canonical, social metadata | Technical SEO assets | `references/schema-patterns.md` |
+| First keywords, search intent, topic clusters, content brief, internal links | Initial content system | `references/content-and-programmatic.md` |
+| AI Overviews, ChatGPT, Perplexity, citations, AI visibility | GEO foundation | `references/citability-checklist.md` |
+| robots.txt, AI bots, llms.txt, server rendering, entity readiness | Technical GEO | `references/llms-template.md` |
+| Local business, ecommerce, product/category pages | Optional business-model track | `references/local-and-commerce.md` |
+| GSC, GA4, performance data, crawler exports, baseline, weekly report | Measurement and iteration | `references/evidence-and-reporting.md` and `references/weekly-reporting.md` |
 
-Combine modes only when the request needs them. For example, a GEO audit may use Traditional SEO audit + Content GEO + Technical GEO; a schema task should not trigger a full site audit unless requested.
+Combine modes only when needed. For a new SaaS website, use Startup growth foundation + Startup website experience + SEO foundation audit. Do not trigger a full GEO or reporting workflow for a one-page metadata fix.
 
 ## Operating workflow
 
-1. Establish scope: domain or repository, page set, business model, target audience, locations, target queries, platforms, date range, and desired deliverable.
-2. Inspect the available evidence before making claims. Prefer rendered HTML for client-side metadata and schema; use GSC/GA4/crawl exports or approved connectors when available; label assumptions and missing data.
-3. Separate observations from recommendations. Every important finding should include evidence, impact, confidence, priority, owner, and a validation method.
-4. Prioritize by business impact and implementation leverage. Use Critical for crawl/index/render blockers, High for material ranking or visibility risk, Medium for meaningful optimization, and Low for cleanup.
-5. Produce the requested artifact: diagnosis, implementation patch, content brief, technical markup, report, roadmap, or monitoring plan. Do not invent metrics, citations, crawl results, platform behavior, or successful implementation.
-6. End with validation: what to re-fetch, test, compare, or monitor, and when a change should be rechecked.
+1. Establish the startup context: product, target customer, painful job, business model, market, geography, current website, constraints, and desired first conversion.
+2. State one concise design read before substantial website work: `Design read: [audience] needs [primary job]; use [information hierarchy and interaction strategy] with [visual character], while avoiding [generic pattern].`
+3. Define the smallest useful site: homepage, product or service page, use cases, pricing or conversion page, proof, documentation/resources, and trust/about pages only when justified by the business.
+4. Inspect available evidence before making claims. Prefer rendered HTML for client-side metadata and schema; use Search Console, analytics, performance data, crawl exports, or approved connectors when available; label assumptions and missing data.
+5. Prioritize by business impact and implementation leverage. Every important finding should include evidence, impact, confidence, priority, owner, and a validation method.
+6. Produce the requested artifact: positioning brief, page map, landing-page structure, implementation patch, content brief, technical markup, roadmap, baseline, or report. Do not invent metrics, testimonials, customers, citations, crawl results, or product claims.
+7. End with validation: what to re-fetch, test, compare, or monitor, and when the change should be rechecked.
+
+## Startup website experience
+
+- Make the product, audience, problem, proof, and next action clear in the first useful viewport.
+- Choose page hierarchy and visual language from the product and market; avoid generic AI defaults such as an interchangeable centered hero, three equal feature cards, decorative gradient blobs, and claims without proof.
+- Use real or explicitly marked placeholder content. Do not invent customers, testimonials, logos, usage numbers, or performance claims.
+- Define useful responsive behavior, accessible controls, focus states, loading/error states, and stable layouts where the site has interaction or dynamic data.
+- Treat page performance and accessibility as launch requirements because they affect both user trust and organic acquisition.
+- Prefer the smallest coherent design system: type roles, color roles, spacing, buttons, links, cards, forms, and content states.
 
 ## Traditional SEO guardrails
 
@@ -63,7 +63,11 @@ For AI visibility measurement, preserve the exact query corpus, run isolated tes
 
 ## Deliverable defaults
 
-For an audit, use an executive summary followed by an evidence table and a Now/Next/Later roadmap. For an implementation request, show the smallest accurate patch plus validation steps. For a content request, provide intent, audience, outline or rewrite direction, evidence requirements, internal-link targets, and citability checks. For a recurring report, compare the current period with the correct prior period and rebuild actions from fresh evidence instead of copying prior recommendations.
+For a startup plan, lead with assumptions, target audience, page priorities, first conversion path, technical foundation, first content bets, and a 30/60/90-day roadmap. For an implementation request, show the smallest accurate patch plus validation steps. For a content request, provide intent, audience, outline or rewrite direction, evidence requirements, internal-link targets, and citability checks. For a recurring report, compare the current period with the correct prior period and rebuild actions from fresh evidence instead of copying prior recommendations.
+
+## Scope boundary
+
+Use this skill for early-stage websites and initial organic-growth systems. Route unrelated dashboard/product UI work to a dedicated product-design skill. Route mature enterprise SEO operations, large-scale migration programs, paid acquisition, and general business analytics to a specialized workflow unless the user explicitly asks to connect them to startup SEO.
 
 ## Supporting references
 
@@ -74,3 +78,5 @@ For an audit, use an executive summary followed by an evidence table and a Now/N
 - Read [references/content-and-programmatic.md](references/content-and-programmatic.md) for content authority, programmatic, and competitive page work.
 - Read [references/local-and-commerce.md](references/local-and-commerce.md) for local, maps, ecommerce, and product visibility work.
 - Read [references/evidence-and-reporting.md](references/evidence-and-reporting.md) for data-source contracts, citation benchmarks, crawler telemetry, and recurring reports.
+- Read [references/startup-web-foundation.md](references/startup-web-foundation.md) for product-to-website framing, page maps, landing-page structure, and design quality gates.
+- Read [references/weekly-reporting.md](references/weekly-reporting.md) when the user explicitly wants a recurring SEO/GEO report or weekly operating cadence.

@@ -1,6 +1,6 @@
 interface:
-  display_name: "SEO + GEO Suite"
-  short_description: "Audit and improve search visibility"
-  default_prompt: "Use $seo-geo-suite to audit this site and prioritize SEO and AI-search visibility improvements."
+  display_name: "Startup SEO Starter"
+  short_description: "Launch an SEO-ready startup website"
+  default_prompt: "Use $startup-seo-starter to plan and improve this startup's website, SEO foundation, and early organic-growth roadmap."
 policy:
   allow_implicit_invocation: true
