@@ -1,8 +1,8 @@
 ---
 name: startup-seo-starter
-description: Build and improve SEO-ready startup websites and early organic growth foundations. Use for product positioning, website information architecture, landing pages, technical SEO, initial content planning, AI-search visibility, Schema, sitemap, GEO readiness, and early SEO measurement. Do not use for unrelated product UI work or mature enterprise SEO operations.
+description: Build and improve SEO-ready startup websites and early organic growth foundations, including technical SEO, initial content, AI-search visibility, measurement, and recurring SEO/GEO change monitoring. Do not use for unrelated product UI work or mature enterprise SEO operations.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   focus: startup websites and early organic growth
 ---
 
@@ -28,8 +28,9 @@ Use this skill to help an early-stage company establish a clear, useful, search-
 | PR, directories, partnerships, reviews, founder expertise, early authority | Authority and distribution | `references/authority-and-distribution.md` |
 | Local business, ecommerce, product/category pages | Optional business-model track | `references/local-and-commerce.md` |
 | GSC, GA4, performance data, crawler exports, baseline, weekly report | Measurement and iteration | `references/evidence-and-reporting.md`, `references/google-connectors.md`, and `references/weekly-reporting.md` |
+| Search algorithm/product changes, SEO/GEO blogs, recurring digest, industry updates | SEO/GEO change monitoring | `references/seo-geo-monitoring.md` |
 
-Combine modes only when needed. For a new SaaS website, use Startup growth foundation + Startup website experience + SEO foundation audit. Do not trigger a full GEO or reporting workflow for a one-page metadata fix.
+Combine modes only when needed. For a new SaaS website, use Startup growth foundation + Startup website experience + SEO foundation audit. Do not trigger a full GEO or reporting workflow for a one-page metadata fix. Use the monitoring mode only when the user asks to track ecosystem changes or a recurring digest is explicitly configured.
 
 ## Operating workflow
 
@@ -91,3 +92,4 @@ Use this skill for early-stage websites and initial organic-growth systems. Rout
 - Read [references/evidence-and-reporting.md](references/evidence-and-reporting.md) for data-source contracts, citation benchmarks, crawler telemetry, and recurring reports.
 - Read [references/startup-web-foundation.md](references/startup-web-foundation.md) for product-to-website framing, page maps, landing-page structure, and design quality gates.
 - Read [references/weekly-reporting.md](references/weekly-reporting.md) when the user explicitly wants a recurring SEO/GEO report or weekly operating cadence.
+- Read [references/seo-geo-monitoring.md](references/seo-geo-monitoring.md) when tracking SEO/GEO blogs, official platform changes, search incidents, or a recurring two-day/weekly industry digest.
