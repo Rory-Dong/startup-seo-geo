@@ -1,4 +1,4 @@
-# Startup SEO Starter for Codex
+# Startup SEO GEO - Codex
 
 A Codex skill maintained by [Pingplus](https://pingplus.ai) for early-stage companies and small teams building an SEO-ready website, AI-search visibility, an early organic-growth foundation, and a sustainable SEO/GEO monitoring workflow.
 
